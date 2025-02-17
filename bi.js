@@ -5,7 +5,6 @@ window.onload = function() {
     setTimeout(function() {
         // Hide the spinner and second image after 20 seconds
         document.getElementById('spinner').style.display = 'none';
-        document.getElementById('ppp2').style.display = 'none';
         
         // Change the status text to red and display "Payment not completed"
         const status = document.getElementById('status');
