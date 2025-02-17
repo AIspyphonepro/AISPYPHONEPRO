@@ -1,3 +1,9 @@
+window.addEventListener("pageshow", function (event) {
+    if (event.persisted) {
+        location.reload();
+    }
+});
+
 document.addEventListener("DOMContentLoaded", function () {
     let btn = document.querySelector(".activateBtn");
 
