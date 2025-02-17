@@ -1,0 +1,85 @@
+body {
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: white;
+    font-family: Arial, sans-serif;
+}
+
+.card {
+    text-align: center;
+    width: 300px;
+    padding: 20px;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 350px;
+    transition: all 0.3s ease;
+}
+
+.card:hover {
+    box-shadow: 0 6px 30px rgba(255, 165, 0, 0.4);
+}
+
+img {
+    width: 100%;
+    max-width: 200px;
+    margin-bottom: 20px;
+}
+
+.spinner {
+    width: 80px;
+    height: 10px;
+    background: #ff9900;
+    animation: moveLine 3s linear infinite;
+    margin-bottom: 20px;
+    display: block;
+}
+
+@keyframes moveLine {
+    0% {
+        width: 0;
+        background: #ff9900;
+    }
+    50% {
+        width: 80px;
+        background: #ff9900;
+    }
+    100% {
+        width: 0;
+        background: transparent;
+    }
+}
+
+#status {
+    font-size: 16px;
+    color: #333;
+    margin-bottom: 20px;
+}
+
+.retry-button {
+    padding: 10px 20px;
+    background-color: orange;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 14px;
+    transition: background-color 0.3s ease;
+}
+
+.retry-button:hover {
+    background-color: darkorange;
+}
+
+.red-text {
+    color: red;
+}
