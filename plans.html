@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Subscription Plans</title>
+    <link rel="stylesheet" href="plans.css">
+</head>
+<body>
+
+    <!-- خلفية ثلاثية الأبعاد -->
+    <canvas id="background"></canvas>
+
+    <!-- النص العلوي -->
+    <h1 class="payment-security">ALL PAYMENTS ARE SECURED BY BINANCE</h1>
+
+    <!-- الحاوية الرئيسية -->
+    <div class="plans-container">
+        <!-- Plan 1 -->
+        <div class="plan">
+            <h2>Free Trial 72 Hours</h2>
+            <p class="description">Try the program for 72 hours. Get your money back if not satisfied.</p>
+            <div class="price">50 <span>USDT</span></div>
+            <ul class="features">
+                <li><span class="check">✔️</span> Unlimited Hacking Operations</li>
+                <li><span class="check">✔️</span> Unlimited Screen Recording</li>
+                <li><span class="check">✔️</span> All Features Unlocked</li>
+                <li><span class="check">✔️</span> Fast Free Support</li>
+            </ul>
+            <a class="subscribe-btn" onclick="openCryptoPortal()">Subscribe Now</a>
+
+        </div>
+
+        <!-- Plan 2 -->
+        <div class="plan">
+            <h2>Standard Plan</h2>
+            <p class="description">Get full access with some limitations.</p>
+            <div class="price">350 <span>USDT</span></div>
+            <ul class="features">
+                <li><span class="cross">✖️</span> Unlimited Hacking Operations</li>
+                <li><span class="check">✔️</span> Unlimited Screen Recording</li>
+                <li><span class="cross">✖️</span> All Features Unlocked</li>
+                <li><span class="check">✔️</span> Fast Free Support</li>
+            </ul>
+            <a class="subscribe-btn" onclick="openCrypto1Portal(1)">Subscribe Now</a>
+        </div>
+
+        <!-- Plan 3 -->
+        <div class="plan">
+            <h2>Premium Plan</h2>
+            <p class="description">Unlock everything with premium access.</p>
+            <div class="price">999 <span>USDT</span></div>
+            <ul class="features">
+                <li><span class="check">✔️</span> Unlimited Hacking Operations</li>
+                <li><span class="check">✔️</span> Unlimited Screen Recording</li>
+                <li><span class="check">✔️</span> All Features Unlocked</li>
+                <li><span class="check">✔️</span> Fast Free Support</li>
+            </ul>
+            <a class="subscribe-btn" onclick="openCrypto2Portal(2)">Subscribe Now</a>
+        </div>
+    </div>
+
+    <script src="plans.js"></script>
+</body>
+</html>

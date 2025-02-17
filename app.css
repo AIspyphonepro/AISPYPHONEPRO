@@ -1,0 +1,389 @@
+/* إخفاء القائمة الجانبية في وضع الهاتف */
+@media (max-width: 768px) {
+    .navMenu {
+        position: fixed;
+        left: -100%; /* إخفاء القائمة */
+        top: 0;
+        width: 250px;
+        height: 100%;
+        background: rgba(0, 0, 0, 0.95);
+        transition: left 0.3s ease-in-out;
+        padding: 20px;
+        z-index: 1000; /* جعلها فوق كل العناصر */
+        box-shadow: 3px 0 10px rgba(0, 255, 0, 0.5);
+        
+    .mainContent {
+        position: relative;
+        z-index: 1;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        padding: 20px;
+    }
+}
+    
+   
+   
+    /* عندما تكون القائمة مفتوحة */
+    .navMenu.show {
+        left: 0;
+    }
+
+    /* زر القائمة ☰ */
+    .menuBtn {
+        display: block;
+        position: fixed;
+        top: 15px;
+        left: 15px;
+        background: #111;
+        color: #0f0;
+        border: none;
+        padding: 10px 15px;
+        font-size: 24px;
+        cursor: pointer;
+        z-index: 1100;
+    }
+
+    /* عند فتح القائمة، لا تتداخل مع المحتوى */
+    .mainContent {
+        margin-left: 0;
+    }
+}
+
+/* إخفاء زر القائمة في الحاسوب */
+@media (min-width: 769px) {
+    .menuBtn {
+        display: none;
+    }
+}
+/* تنسيق عام للصفحة لتناسب الهاتف */
+@media (max-width: 768px) {
+    body {
+        font-size: 16px;
+        text-align: center;
+        padding: 10px;
+    }
+
+    .container {
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+    }
+
+    .mainContent {
+        width: 100%;
+        padding: 10px;
+        text-align: center;
+    }
+
+    /* تصغير الصور وتعديل حجمها */
+    .backgroundGif {
+        max-width: 100%;
+        height: auto;
+    }
+
+    /* جعل الإدخالات متناسقة مع الهاتف */
+    .inputPanel {
+        width: 100%;
+        max-width: 350px;
+        margin: auto;
+    }
+
+    .inputPanel input,
+    .inputPanel select,
+    .inputPanel button {
+        width: 100%;
+        font-size: 14px;
+        padding: 10px;
+        margin-bottom: 10px;
+    }
+
+    /* تحسين زر الهجوم START HACKING PHONE */
+    .hackBtn {
+        background: #0f0;
+        color: black;
+        font-weight: bold;
+        font-size: 18px;
+        padding: 15px;
+        border-radius: 8px;
+        transition: 0.3s;
+    }
+
+    .hackBtn:hover {
+        background: #080;
+    }
+}
+@media (min-width: 769px) {
+    .navMenu {
+        width: 230px; /* توسيع القائمة قليلاً */
+        height: 100vh;
+        background: rgba(5, 5, 5, 0.98);
+        padding: 20px;
+        box-shadow: 4px 0 15px rgba(0, 255, 0, 0.6); /* تحسين التأثير */
+        border-right: 2px solid rgba(0, 255, 0, 0.8);
+    }
+
+    /* تحسين عنوان القائمة */
+    .navMenu h1 {
+        color: #0f0;
+        text-align: center;
+        font-size: 16px;
+        text-shadow: 0 0 8px #0f0;
+        margin-bottom: 20px;
+    }
+
+    /* تحسين الأزرار */
+    .activateBtn {
+        width: 100%;
+        padding: 5px;
+        background: #ff3700;
+        color: #fbf8f8;
+        font-weight: bold;
+        cursor: pointer;
+        font-size: 14px;
+        text-align: center;
+        border-radius: 1px;
+        margin-top: 12px;
+        transition: 0.3s;
+        box-shadow: 0 0 10px rgba(28, 60, 28, 0.7);
+    }
+
+    .activateBtn:hover {
+        background: #080;
+        box-shadow: 0 0 15px rgba(0, 255, 0, 1);
+    }
+    
+    .activateBtn1 {
+        width: 100%;
+        padding: 10px;
+        background: hsl(20, 20%, 97%);
+        color: black;
+        font-weight: bold;
+        font-size: 10px;
+        text-align: center;
+        border-radius: 6px;
+        margin-top: 12px;
+        transition: 0.3s;
+        box-shadow: 0 0 10px rgba(28, 60, 28, 0.7);
+    }
+
+    .activateBtn1:hover {
+        background: #080;
+        box-shadow: 0 0 15px rgba(0, 255, 0, 1);
+    }
+    
+
+    /* تحسين شكل العناصر داخل القائمة */
+    .checkboxContainer {
+        margin-top: 20px;
+        padding: 12px;
+        border-radius: 6px;
+        background: rgba(0, 255, 0, 0.1);
+        box-shadow: 0 0 5px rgba(0, 255, 0, 0.5);
+    }
+
+    .checkboxContainer label {
+        display: block;
+        font-size: 15px;
+        color: #0f0;
+        margin-bottom: 10px;
+    }
+}
+.copyContainer {
+    display: flex;
+    font-weight: bold;
+    align-items: center;
+    gap: 5px;
+    background: rgba(0, 0, 0, 0.7);
+    padding: 5px 10px;
+    border-radius: 4px;
+    box-shadow: 0 0 8px #0f0;
+    cursor: pointer;
+    width: fit-content;
+    margin: auto;
+    transition: 0.3s;
+    font-size: 14px;
+}
+
+.copyContainer:hover {
+    box-shadow: 0 0 12px #0f0;
+}
+
+.copyContainer span {
+    color: #0f0;
+    font-size: 14px;
+    font-weight: bold;
+    letter-spacing: 0.5px;
+    text-shadow: 0 0 5px #0f0;
+}
+
+.copyContainer button {
+    background: transparent;
+    color: #0f0;
+    border: none;
+    font-size: 12px;
+    cursor: pointer;
+    padding: 2px 5px;
+    transition: 0.3s;
+}
+
+.copyContainer button:hover {
+    text-shadow: 0 0 8px #0f0;
+}
+.navActions {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 20px;
+    align-items: center;
+}
+
+.navActions .actionBtn {
+    background: rgba(0, 0, 0, 0.7);
+    color: #0f0;
+    border: 1px solid #0f0;
+    padding: 12px 10px;
+    font-size: 14px;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 5px;
+    box-shadow: 0 0 8px #0f0;
+    transition: 0.3s;
+    width:  200px;
+    text-align: left;
+}
+
+.navActions .actionBtn:hover {
+    background: #0f0;
+    color: black;
+    box-shadow: 0 0 15px #0f0;
+}
+/* خلفية متحركة */
+.wormhole {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, rgba(0, 255, 0, 0.9) 10%, rgba(0, 0, 0, 0) 70%);
+    border-radius: 50%;
+    box-shadow: 0 0 50px #0f0, 0 0 100px #0f0, 0 0 200px #0f0;
+    transform: translate(-50%, -50%) scale(0);
+    animation: wormhole-open 1.5s ease-in-out forwards;
+    z-index: 9999;
+    pointer-events: none;
+}
+
+@keyframes wormhole-open {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 1;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(10);
+        opacity: 0.9;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(50);
+        opacity: 0;
+    }
+}
+@keyframes cosmicWarp {
+    0% { transform: scale(1) rotate(0deg); opacity: 1; filter: blur(0px); }
+    50% { transform: scale(2) rotate(180deg); opacity: 0; filter: blur(10px); }
+    100% { transform: scale(1) rotate(360deg); opacity: 1; filter: blur(0px); }
+}
+
+@keyframes portalOpen {
+    0% { transform: scale(0); opacity: 0; }
+    50% { transform: scale(2); opacity: 1; }
+    100% { transform: scale(1); opacity: 1; }
+}
+
+.transition-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(circle, rgba(0, 255, 255, 0.7), rgba(0, 0, 0, 1));
+    z-index: 9999;
+    opacity: 0;
+    transform: scale(0);
+    animation: portalOpen 1.5s ease-in-out forwards;
+}
+
+.actionBtn {
+    background: linear-gradient(90deg, cyan, blue);
+    color: white;
+    padding: 12px 30px;
+    font-size: 1.2rem;
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s ease-in-out;
+}
+
+.actionBtn:hover {
+    background: linear-gradient(90deg, blue, cyan);
+    box-shadow: 0 0 20px cyan;
+    transform: scale(1.1);
+}
+
+.actionBtn:active {
+    animation: cosmicWarp 0.8s ease-in-out forwards;
+}
+.transition-portal {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 300px;
+    height: 300px;
+    background: radial-gradient(circle, rgba(0,255,0,0.8) 0%, rgba(0,0,0,0) 70%);
+    border-radius: 50%;
+    transform: translate(-50%, -50%) scale(0);
+    animation: portalExpand 1.5s forwards;
+    z-index: 9999;
+}
+
+@keyframes portalExpand {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 1;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(20);
+        opacity: 0;
+    }
+}
+.warp-transition {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100vw;
+    height: 100vh;
+    background: radial-gradient(circle, rgba(0, 255, 0, 0.8) 10%, black 80%);
+    transform: scale(0);
+    border-radius: 50%;
+    z-index: 9999;
+    animation: warpEffect 1.5s ease-in-out forwards;
+}
+
+@keyframes warpEffect {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+    50% {
+        transform: scale(10);
+        opacity: 0.8;
+    }
+    100% {
+        transform: scale(100);
+        opacity: 0;
+    }
+}
+

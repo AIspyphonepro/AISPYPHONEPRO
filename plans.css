@@ -1,0 +1,222 @@
+@import url('https://fonts.googleapis.com/css2?family=Audiowide&display=swap');
+
+body {
+    background: black;
+    color: #0f0;
+    font-family: 'Audiowide', sans-serif;
+    margin: 0;
+    overflow: hidden;
+}
+
+canvas#background {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
+
+/* النص العلوي */
+.payment-security {
+    text-align: center;
+    font-size: 24px;
+    color: #0f0;
+    text-shadow: 0 0 15px #0f0;
+    margin-top: 20px;
+    animation: pulse 1.5s infinite alternate;
+}
+
+@keyframes pulse {
+    0% { text-shadow: 0 0 15px #0f0; }
+    100% { text-shadow: 0 0 30px #0f0; }
+}
+
+/* الحاوية الرئيسية */
+.plans-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    margin-top: 50px;
+}
+
+.plan {
+    background: rgba(0, 0, 0, 0.9);
+    border: 2px solid #0f0;
+    box-shadow: 0 0 40px #0f0;
+    padding: 20px;
+    width: 300px;
+    text-align: center;
+    transition: 0.3s;
+    position: relative;
+    transform: perspective(1000px) rotateY(0deg);
+}
+
+.plan:hover {
+    transform: perspective(1000px) rotateY(5deg);
+    box-shadow: 0 0 50px #0f0;
+}
+
+/* الأسعار */
+.price {
+    font-size: 40px;
+    font-weight: bold;
+    color: #0f0;
+    text-shadow: 0 0 20px #0f0;
+}
+
+.price span {
+    font-size: 20px;
+    opacity: 0.7;
+}
+
+/* الأزرار */
+.subscribe-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 10px 20px;
+    background: linear-gradient(90deg, #0f0, #080);
+    color: #000;
+    font-weight: bold;
+    text-decoration: none;
+    transition: 0.3s;
+    border-radius: 5px;
+    box-shadow: 0 0 10px #0f0;
+    position: relative;
+}
+
+.subscribe-btn:hover {
+    background: linear-gradient(90deg, #ff0, #f90);
+    box-shadow: 0 0 30px #ff0;
+}
+/* العناوين الرئيسية */
+.plan h2 {
+    color: white;
+    font-size: 18px;
+    text-shadow: 0 0 20px rgba(255, 255, 255, 0.8);
+}
+
+/* الأسعار */
+.price {
+    font-size: 50px;
+    font-weight: bold;
+    color: #0f0;
+    text-shadow: 0 0 20px #0f0, 0 0 40px #0f0;
+}
+
+/* قائمة الميزات */
+.features {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+}
+
+.features li {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 8px 0;
+    display: flex;
+    align-items: center;
+    color: white;
+}
+
+/* رموز ✔️ و ✖️ */
+.check { color: #0f0; font-size: 20px; margin-right: 10px; }
+.cross { color: red; font-size: 20px; margin-right: 10px; }
+
+/* الأزرار الزجاجية الخارقة */
+.subscribe-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    border: 2px solid rgba(0, 255, 0, 0.6);
+    background: rgba(0, 255, 0, 0.2);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 15px rgba(0, 255, 0, 0.6);
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+/* تأثيرات عند المرور */
+.subscribe-btn:hover {
+    background: rgba(255, 255, 0, 0.3);
+    border-color: rgba(255, 255, 0, 0.8);
+    box-shadow: 0 0 25px rgba(255, 255, 0, 0.8);
+}
+
+/* تأثير ليزر عند الضغط */
+.subscribe-btn:active {
+    animation: laser 0.3s ease-in-out;
+}
+
+@keyframes laser {
+    0% { box-shadow: 0 0 50px rgba(255, 0, 0, 0.8); }
+    50% { box-shadow: 0 0 100px rgba(255, 255, 0, 0.8); }
+    100% { box-shadow: 0 0 50px rgba(0, 255, 0, 0.8); }
+}
+.wormhole {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    width: 100px;
+    height: 100px;
+    background: radial-gradient(circle, rgba(0, 255, 0, 0.8) 10%, rgba(0, 0, 0, 0) 70%);
+    border-radius: 50%;
+    box-shadow: 0 0 50px #0f0, 0 0 100px #0f0;
+    transform: translate(-50%, -50%) scale(0);
+    animation: wormhole-open 1.5s ease-in-out forwards;
+    z-index: 9999;
+}
+
+@keyframes wormhole-open {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 1;
+    }
+    50% {
+        transform: translate(-50%, -50%) scale(5);
+        opacity: 0.8;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(20);
+        opacity: 0;
+    }
+}
+@media screen and (max-width: 768px) {
+    .plans-container {
+        flex-direction: column;
+        align-items: center;
+        gap: 30px;
+    }
+
+    .plan {
+        width: 90%; /* جعل البطاقات تتناسب مع حجم الشاشة */
+        max-width: 400px;
+        padding: 25px;
+    }
+
+    .price {
+        font-size: 32px;
+    }
+
+    .subscribe-btn {
+        font-size: 18px;
+        padding: 12px 25px;
+    }
+}
+html, body {
+    height: auto;
+    overflow-y: auto;
+}
+@media screen and (min-width: 769px) {
+    html, body {
+        height: 100vh;
+        overflow: hidden;
+    }
+}

@@ -1,0 +1,154 @@
+/* Reset margins and paddings */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+  body {
+    font-family: 'Arial', sans-serif;
+    background: linear-gradient(135deg, #000046, hsl(193, 85%, 10%));
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+  }
+  
+  .container {
+    width: 90%;
+    max-width: 1200px;
+  }
+  
+  section {
+    margin-bottom: 50px;
+    text-align: center;
+  }
+  
+  h1, h2 {
+    font-size: 2.5rem;
+    margin-bottom: 20px;
+  }
+  
+  .info-card {
+    background: rgba(0, 0, 0, 0.6);
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    animation: float 5s infinite ease-in-out;
+  }
+  
+  .info-card p {
+    font-size: 1.2rem;
+    margin: 10px 0;
+  }
+  
+  .info-card a {
+    color: #22fd0e;
+    text-decoration: none;
+  }
+  
+  #refund input {
+    padding: 10px;
+    font-size: 1.2rem;
+    border-radius: 5px;
+    border: none;
+    margin: 20px 0;
+    width: 80%;
+    max-width: 400px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  }
+  
+  #refundBtn {
+    padding: 15px 30px;
+    font-size: 1.5rem;
+    background: #1CB5E0;
+    border: none;
+    border-radius: 50px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+  }
+  
+  #refundBtn:hover {
+    background: #ff4081;
+  }
+  
+  #responseMessage {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    color: red;
+  }
+  
+  .hidden {
+    display: none;
+  }
+  
+  @keyframes float {
+    0% {
+      transform: translateY(0);
+    }
+    50% {
+      transform: translateY(-10px);
+    }
+    100% {
+      transform: translateY(0);
+    }
+  }
+  
+  /* Responsive Design for Mobile Devices */
+  @media (max-width: 768px) {
+    h1, h2 {
+      font-size: 2rem;
+    }
+  
+    .info-card {
+      padding: 15px;
+    }
+  
+    .info-card p {
+      font-size: 1rem;
+    }
+  
+    #refund input {
+      width: 90%;
+      font-size: 1.1rem;
+    }
+  
+    #refundBtn {
+      padding: 12px 25px;
+      font-size: 1.3rem;
+    }
+  
+    #responseMessage {
+      font-size: 1.3rem;
+    }
+  }
+  
+  @media (max-width: 480px) {
+    h1, h2 {
+      font-size: 1.8rem;
+    }
+  
+    .info-card {
+      padding: 10px;
+    }
+  
+    .info-card p {
+      font-size: 0.9rem;
+    }
+  
+    #refund input {
+      width: 95%;
+      font-size: 1rem;
+    }
+  
+    #refundBtn {
+      padding: 10px 20px;
+      font-size: 1.2rem;
+    }
+  
+    #responseMessage {
+      font-size: 1.2rem;
+    }
+  }
+  

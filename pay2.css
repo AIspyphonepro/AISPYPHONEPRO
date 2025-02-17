@@ -1,0 +1,146 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap');
+
+body {
+    margin: 0;
+    padding: 0;
+    background: url('images/bb3.jpg') center/cover no-repeat;
+    color: white;
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    overflow: hidden;
+}
+
+/* الحاوية الرئيسية */
+.payment-container {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(15px);
+    border: 2px solid rgba(0, 255, 255, 0.3);
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.5);
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    transition: transform 0.3s ease-out, box-shadow 0.3s ease-out;
+    animation: pulse 3s infinite alternate;
+    transform: perspective(1000px) rotateY(0deg);
+}
+
+/* عندما تقترب الفأرة */
+.payment-container:hover {
+    transform: perspective(1000px) rotateY(5deg) scale(1.05);
+    box-shadow: 0 0 50px rgba(0, 255, 255, 0.7);
+}
+
+/* تأثير الاهتزاز الخفيف */
+@keyframes pulse {
+    0% { box-shadow: 0 0 20px rgba(0, 255, 255, 0.5); transform: rotateY(2deg); }
+    100% { box-shadow: 0 0 40px rgba(0, 255, 255, 0.7); transform: rotateY(-2deg); }
+}
+
+
+/* صورة QR */
+.qr-code {
+    width: 180px;
+    height: 180px;
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 30px rgba(0, 255, 255, 0.8);
+    transition: transform 0.3s, box-shadow 0.3s;
+}
+
+.qr-code:hover {
+    transform: scale(1.1);
+    box-shadow: 0 0 50px rgba(0, 255, 255, 1);
+}
+
+/* معلومات الدفع */
+.payment-info {
+    font-size: 18px;
+    color: #f6f9f9;
+    background: rgba(0, 255, 255, 0.2);
+    padding: 10px;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0, 255, 255, 0.5);
+}
+
+/* إدخال البيانات */
+.payment-input {
+    width: 80%;
+    padding: 10px;
+    margin-top: 15px;
+    font-size: 16px;
+    border: 2px solid #0ff;
+    background: rgba(0, 0, 0, 0.7);
+    color: rgb(229, 248, 248);
+    text-align: center;
+    outline: none;
+    border-radius: 5px;
+    transition: 0.3s;
+}
+
+.payment-input:focus {
+    box-shadow: 0 0 20px #0ff;
+}
+
+/* الزر */
+.submit-btn {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 12px 25px;
+    font-size: 18px;
+    font-weight: bold;
+    background: linear-gradient(90deg, #0ff, #0088ff);
+    color: black;
+    text-decoration: none;
+    border-radius: 5px;
+    box-shadow: 0 0 20px #0ff;
+    transition: 0.3s;
+    position: relative;
+    overflow: hidden;
+}
+
+.submit-btn:hover {
+    background: linear-gradient(90deg, #ff0, #ff8);
+    box-shadow: 0 0 30px #ff0;
+    transform: scale(1.1);
+}
+
+/* تأثير الزر المتحرك */
+.submit-btn::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.2) 10%, transparent 50%);
+    transform: translateX(-50%) translateY(-50%);
+    transition: 0.3s;
+    opacity: 0;
+}
+
+.submit-btn:hover::before {
+    opacity: 1;
+    transform: translateX(0) translateY(0);
+}
+@media (max-width: 768px) {
+    .payment-container {
+        width: 70%;
+        padding: 18px;
+        transform: none; /* إلغاء تأثير الدوران على الهواتف */
+        animation: none; /* تعطيل الاهتزاز المستمر */
+    }
+
+    .payment-container:hover {
+        transform: scale(1.02); /* تكبير بسيط عند اللمس بدلاً من الدوران */
+        box-shadow: 0 0 20px rgba(0, 255, 255, 0.5);
+    }
+
+    .qr-code {
+        width: 200px; /* تصغير الصورة قليلاً لتناسب الشاشة */
+        height: auto;
+    }
+}
+
