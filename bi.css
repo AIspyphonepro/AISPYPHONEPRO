@@ -31,13 +31,13 @@ body {
 
 img {
     width: 100%;
-    max-width: 200px;
+    max-width: 150px;
     margin-bottom: 20px;
 }
 
 .spinner {
-    width: 80px;
-    height: 10px;
+    width: 90px;
+    height: 15px;
     background: #ff9900;
     animation: moveLine 3s linear infinite;
     margin-bottom: 20px;
