@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="ar">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI SPY PHONE PRO</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="app.css">
+</head>
+<body>
+    <!-- زر القائمة (يظهر فقط في الهاتف) -->
+    <button class="menuBtn" onclick="toggleMenu()">☰</button>
+
+    <div class="container">
+        <!-- القائمة الجانبية -->
+        <nav class="navMenu">
+            <h1>AI SPY PHONE PRO 
+                Hacking Team’s RCS
+            </h1>
+            <img src="images/logo1.png" alt="Logo" class="logo">
+            <div class="copyContainer">
+                <p id="copyText">ID:9007665398664</p>
+                <button onclick="copyToClipboard()">📋 Copy</button>
+            </div>
+            <h1></h1>
+            
+           
+            <div class="navActions">
+                <button class="actionBtn" onclick="openSettings()">Settings</button>
+                <button class="actionBtn" onclick="contactUs()">Contact Us</button>
+                <button class="actionBtn" onclick="openFAQ()">FAQ</button>
+            </div>
+            <h1></h1>
+            <button class="activateBtn">Activate Program</button>
+        </nav>
+        
+
+        <!-- القسم الرئيسي -->
+        <div class="mainContent">
+            <img src="images/i2.gif" alt="Background Animation" class="backgroundGif">
+            <div class="inputPanel">
+                <h1>Hacking Team’s RCS</h1>
+                <select id="countrySelect" onchange="updatePhoneCode()">
+                    <option value="" disabled selected>Select Target's Country</option>
+                    <option value="+1">🇺🇸 United States</option>
+                    <option value="+44">🇬🇧 United Kingdom</option>
+                    <option value="+33">🇫🇷 France</option>
+                    <option value="+49">🇩🇪 Germany</option>
+                    <option value="+39">🇮🇹 Italy</option>
+                    <option value="+34">🇪🇸 Spain</option>
+                    <option value="+1">🇨🇦 Canada</option>
+                    <option value="+7">🇷🇺 Russia</option>
+                    <option value="+86">🇨🇳 China</option>
+                    <option value="+81">🇯🇵 Japan</option>
+                    <option value="+91">🇮🇳 India</option>
+                    <option value="+213">🇩🇿 Algeria</option> <!-- الجزائر في المنتصف -->
+                    <option value="+20">🇪🇬 Egypt</option>
+                    <option value="+966">🇸🇦 Saudi Arabia</option>
+                    <option value="+971">🇦🇪 United Arab Emirates</option>
+                    <option value="+90">🇹🇷 Turkey</option>
+                    <option value="+41">🇨🇭 Switzerland</option>
+                    <option value="+55">🇧🇷 Brazil</option>
+                    <option value="+27">🇿🇦 South Africa</option>
+                    <option value="+82">🇰🇷 South Korea</option>
+                    <option value="+52">🇲🇽 Mexico</option>
+                    <option value="+31">🇳🇱 Netherlands</option>
+                    <option value="+32">🇧🇪 Belgium</option>
+                    <option value="+47">🇳🇴 Norway</option>
+                    <option value="+46">🇸🇪 Sweden</option>
+                    <option value="+48">🇵🇱 Poland</option>
+                    <option value="+61">🇦🇺 Australia</option>
+                    <option value="+64">🇳🇿 New Zealand</option>
+                    <option value="+30">🇬🇷 Greece</option>
+                    <option value="+351">🇵🇹 Portugal</option>
+                    <option value="+372">🇪🇪 Estonia</option>
+                    <option value="+358">🇫🇮 Finland</option>
+                    <option value="+380">🇺🇦 Ukraine</option>
+                    <option value="+62">🇮🇩 Indonesia</option>
+                    <option value="+63">🇵🇭 Philippines</option>
+                    <option value="+65">🇸🇬 Singapore</option>
+                    <option value="+60">🇲🇾 Malaysia</option>
+                    <option value="+98">🇮🇷 Iran</option>
+                    <option value="+964">🇮🇶 Iraq</option>
+                    <option value="+961">🇱🇧 Lebanon</option>
+                    <option value="+962">🇯🇴 Jordan</option>
+                    <option value="+964">🇮🇶 Iraq</option>
+                    <option value="+970">🇵🇸 Palestine</option>
+                    <option value="+963">🇸🇾 Syria</option>
+                    <option value="+965">🇰🇼 Kuwait</option>
+                    <option value="+974">🇶🇦 Qatar</option>
+                    <option value="+968">🇴🇲 Oman</option>
+                    <option value="+212">🇲🇦 Morocco</option>
+                    <option value="+216">🇹🇳 Tunisia</option>
+                    <option value="+249">🇸🇩 Sudan</option>
+                </select>
+
+                <input type="text" id="phoneNumber" placeholder="Enter target's phone number">
+
+                <select id="deviceSystem">
+                    <option value="" disabled selected>Select Device System</option>
+                    <option value="Android">Android</option>
+                    <option value="iPhone">iPhone</option>
+                </select>
+
+                <input type="text" placeholder="Enter target's device name">
+                <button class="hackBtn" onclick="goToPlans()">START HACKING PHONE</button>
+
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function toggleMenu() {
+            document.querySelector(".navMenu").classList.toggle("show");
+        }
+
+        function updatePhoneCode() {
+            let countrySelect = document.getElementById("countrySelect");
+            let phoneNumber = document.getElementById("phoneNumber");
+            phoneNumber.value = countrySelect.value; // تحديث رقم الهاتف برمز الدولة المختارة
+        }
+    </script>
+    <script>
+        function copyToClipboard() {
+            let text = document.getElementById("copyText").innerText;
+            navigator.clipboard.writeText(text).then(() => {
+                alert("Copied: " + text);
+            }).catch(err => {
+                console.error("Error copying text: ", err);
+            });
+        }
+        
+        
+    </script>
+    <script src="index.js"></script>
+    <script>
+        function contactUs() {
+          window.location.href = 'cn.html';
+        }
+      </script>
+       <script>
+        function openFAQ() {
+          window.location.href = 'faq.html';
+        }
+      </script>
+</body>
+</html>

@@ -1,147 +1,399 @@
 <!DOCTYPE html>
-<html lang="ar">
+<html>
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>AI SPY PHONE PRO</title>
-    <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="app.css">
+  <!-- Basic -->
+  <meta charset="utf-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <!-- Mobile Metas -->
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <!-- Site Metas -->
+  <meta name="keywords" content="" />
+  <meta name="description" content="" />
+  <meta name="author" content="" />
+  <link rel="shortcut icon" href="images/favicon.png" type="">
+
+  <title> AI SPY PHONE PRO </title>
+
+  <!-- bootstrap core css -->
+  <link rel="stylesheet" type="text/css" href="css/bootstrap.css" />
+
+  <!-- fonts style -->
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+  <!--owl slider stylesheet -->
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css" />
+
+  <!-- font awesome style -->
+  <link href="css/font-awesome.min.css" rel="stylesheet" />
+
+  <!-- Custom styles for this template -->
+  <link href="css/style.css" rel="stylesheet" />
+  <!-- responsive style -->
+  <link href="css/responsive.css" rel="stylesheet" />
+
 </head>
+
 <body>
-    <!-- زر القائمة (يظهر فقط في الهاتف) -->
-    <button class="menuBtn" onclick="toggleMenu()">☰</button>
 
-    <div class="container">
-        <!-- القائمة الجانبية -->
-        <nav class="navMenu">
-            <h1>AI SPY PHONE PRO 
-                Hacking Team’s RCS
-            </h1>
-            <img src="images/logo1.png" alt="Logo" class="logo">
-            <div class="copyContainer">
-                <p id="copyText">ID:9007665398664</p>
-                <button onclick="copyToClipboard()">📋 Copy</button>
-            </div>
-            <h1></h1>
-            
-           
-            <div class="navActions">
-                <button class="actionBtn" onclick="openSettings()">Settings</button>
-                <button class="actionBtn" onclick="contactUs()">Contact Us</button>
-                <button class="actionBtn" onclick="openFAQ()">FAQ</button>
-            </div>
-            <h1></h1>
-            <button class="activateBtn">Activate Program</button>
-        </nav>
-        
+  <div class="hero_area">
 
-        <!-- القسم الرئيسي -->
-        <div class="mainContent">
-            <img src="images/i2.gif" alt="Background Animation" class="backgroundGif">
-            <div class="inputPanel">
-                <h1>Hacking Team’s RCS</h1>
-                <select id="countrySelect" onchange="updatePhoneCode()">
-                    <option value="" disabled selected>Select Target's Country</option>
-                    <option value="+1">🇺🇸 United States</option>
-                    <option value="+44">🇬🇧 United Kingdom</option>
-                    <option value="+33">🇫🇷 France</option>
-                    <option value="+49">🇩🇪 Germany</option>
-                    <option value="+39">🇮🇹 Italy</option>
-                    <option value="+34">🇪🇸 Spain</option>
-                    <option value="+1">🇨🇦 Canada</option>
-                    <option value="+7">🇷🇺 Russia</option>
-                    <option value="+86">🇨🇳 China</option>
-                    <option value="+81">🇯🇵 Japan</option>
-                    <option value="+91">🇮🇳 India</option>
-                    <option value="+213">🇩🇿 Algeria</option> <!-- الجزائر في المنتصف -->
-                    <option value="+20">🇪🇬 Egypt</option>
-                    <option value="+966">🇸🇦 Saudi Arabia</option>
-                    <option value="+971">🇦🇪 United Arab Emirates</option>
-                    <option value="+90">🇹🇷 Turkey</option>
-                    <option value="+41">🇨🇭 Switzerland</option>
-                    <option value="+55">🇧🇷 Brazil</option>
-                    <option value="+27">🇿🇦 South Africa</option>
-                    <option value="+82">🇰🇷 South Korea</option>
-                    <option value="+52">🇲🇽 Mexico</option>
-                    <option value="+31">🇳🇱 Netherlands</option>
-                    <option value="+32">🇧🇪 Belgium</option>
-                    <option value="+47">🇳🇴 Norway</option>
-                    <option value="+46">🇸🇪 Sweden</option>
-                    <option value="+48">🇵🇱 Poland</option>
-                    <option value="+61">🇦🇺 Australia</option>
-                    <option value="+64">🇳🇿 New Zealand</option>
-                    <option value="+30">🇬🇷 Greece</option>
-                    <option value="+351">🇵🇹 Portugal</option>
-                    <option value="+372">🇪🇪 Estonia</option>
-                    <option value="+358">🇫🇮 Finland</option>
-                    <option value="+380">🇺🇦 Ukraine</option>
-                    <option value="+62">🇮🇩 Indonesia</option>
-                    <option value="+63">🇵🇭 Philippines</option>
-                    <option value="+65">🇸🇬 Singapore</option>
-                    <option value="+60">🇲🇾 Malaysia</option>
-                    <option value="+98">🇮🇷 Iran</option>
-                    <option value="+964">🇮🇶 Iraq</option>
-                    <option value="+961">🇱🇧 Lebanon</option>
-                    <option value="+962">🇯🇴 Jordan</option>
-                    <option value="+964">🇮🇶 Iraq</option>
-                    <option value="+970">🇵🇸 Palestine</option>
-                    <option value="+963">🇸🇾 Syria</option>
-                    <option value="+965">🇰🇼 Kuwait</option>
-                    <option value="+974">🇶🇦 Qatar</option>
-                    <option value="+968">🇴🇲 Oman</option>
-                    <option value="+212">🇲🇦 Morocco</option>
-                    <option value="+216">🇹🇳 Tunisia</option>
-                    <option value="+249">🇸🇩 Sudan</option>
-                </select>
-
-                <input type="text" id="phoneNumber" placeholder="Enter target's phone number">
-
-                <select id="deviceSystem">
-                    <option value="" disabled selected>Select Device System</option>
-                    <option value="Android">Android</option>
-                    <option value="iPhone">iPhone</option>
-                </select>
-
-                <input type="text" placeholder="Enter target's device name">
-                <button class="hackBtn" onclick="goToPlans()">START HACKING PHONE</button>
-
-            </div>
-        </div>
+    <div class="hero_bg_box">
+      <div class="bg_img_box">
+        <img src="images/hero-bg.GIF" alt="">
+      </div>
     </div>
 
-    <script>
-        function toggleMenu() {
-            document.querySelector(".navMenu").classList.toggle("show");
-        }
+    <!-- header section strats -->
+    <header class="header_section">
+      <div class="container-fluid">
+        <nav class="navbar navbar-expand-lg custom_nav-container ">
+          <a class="navbar-brand" href="index.html">
+            <span>
+              AI SPY PHONE PRO 
+            </span>
+          </a>
 
-        function updatePhoneCode() {
-            let countrySelect = document.getElementById("countrySelect");
-            let phoneNumber = document.getElementById("phoneNumber");
-            phoneNumber.value = countrySelect.value; // تحديث رقم الهاتف برمز الدولة المختارة
-        }
-    </script>
-    <script>
-        function copyToClipboard() {
-            let text = document.getElementById("copyText").innerText;
-            navigator.clipboard.writeText(text).then(() => {
-                alert("Copied: " + text);
-            }).catch(err => {
-                console.error("Error copying text: ", err);
-            });
-        }
+       
+    </header>
+    <!-- end header section -->
+    <!-- slider section -->
+    <section class="slider_section ">
+      <div id="customCarousel1" class="carousel slide" data-ride="carousel">
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <div class="container ">
+              <div class="row">
+                <div class="col-md-6 ">
+                  <div class="detail-box">
+                    <h1>
+                      POWER BY 
+                      DARK GPT AND Hacking Team’s RCS API <br>
+                
+                    </h1>
+                    <p>
+                      A comprehensive phone monitoring operation using complex algorithms generated by artificial intelligence to obtain malicious links for stealth installation of the application, enabling full phone surveillance without any traces or prior alerts.
+                    </p>
+                    <div class="btn-box">
+                      <a href="index1.html" class="btn1">START NEW</a>
+
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="img-box">
+                    <img src="images/slider-img.png" alt="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item ">
+            <div class="container ">
+              <div class="row">
+                <div class="col-md-6 ">
+                  <div class="detail-box">
+                    <h1>
+                      POWER BY 
+                      DARK GPT AND Hacking Team’s RCS API <br>
+
+                    </h1>
+                    <p>
+                      A comprehensive phone monitoring operation using complex algorithms generated by artificial intelligence to obtain malicious links for stealth installation of the application, enabling full phone surveillance without any traces or prior alerts.
+                    </p>
+                    <div class="btn-box">
+                      <a href="index1.html" class="btn1">START NEW</a>
+
+                      </a>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="img-box">
+                    <img src="images/slider-img1.png" alt="">
+                
+    </section>
+    <!-- end slider section -->
+  </div>
+
+
+  <!-- service section -->
+
+  <section class="service_section layout_padding">
+    <div class="service_container">
+      <div class="container ">
+        <div class="heading_container heading_center">
+          <h2>
+            Our <span>Services</span>
+          </h2>
+          <p>
+            AI Spy Phone Pro is an independent artificial intelligence that provides the best comprehensive phone monitoring services across all systems.
+          </p>
+        </div>
+        <div class="row">
+          <div class="col-md-4 ">
+            <div class="box ">
+              <div class="img-box">
+                <img src="images/s1.png" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Binance Pay Crypto
+                </h5>
+                <p>
+                  To protect your payments and usage from tracking, we use Binance Pay to receive and refund your money. This is one of the safest methods currently available in this field. All payment methods are directly secured and managed under the control of the Binance platform.
+                </p>
+                
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 ">
+            <div class="box ">
+              <div class="img-box">
+                <img src="images/s2.png" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  AI Protocol
+                </h5>
+                <p>
+                  By providing the AI with information such as email, phone number, and device model, it can create highly complex protocols for comprehensive monitoring and analysis of the phone in a more efficient, secure, and legal manner. This is achieved by storing all encrypted codes in a hidden link.
+                </p>
+               
+                </a>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 ">
+            <div class="box ">
+              <div class="img-box">
+                <img src="images/s3.png" alt="">
+              </div>
+              <div class="detail-box">
+                <h5>
+                  Collecting all data.
+                </h5>
+                <p>
+                  You can literally monitor all phone activities in real-time, including all actions performed. You can also track all passwords, calls, messages, and social media activities. Additionally, you can get a live view of the entire phone screen. All of this is done legally and discreetly, with no data being stored or traceable.
+                </p>
+               
+                </a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="btn-box">
+         
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+  
+  <div class="downloads-section">
+    <div class="downloads-background"></div>
+    <div class="downloads-container">
+        <h2 class="downloads-title"><span id="downloads">2,600,000+</span> Users</h2>
+        <p class="downloads-subtitle">AI SPY PHONE PRO Users</p>
+        <div class="rating-box">
+            <div class="stars">★★★★★</div>
+            <p class="rating-text">Rated 5.0 by Millions of Users</p>
+        </div>
+    </div>
+</div>
+
+  <!-- end service section -->
+
+
+  <!-- about section -->
+
+  <section class="about_section layout_padding">
+    <div class="container  ">
+      <div class="heading_container heading_center">
+        <h2>
+          PROGRAM <span>INTERFACE</span>
+        </h2>
+        <p>
+          A SMOOTH AND EASY-TO-USE PROGRAM INTERFACE, FULLY AUTOMATED BY ARTIFICIAL INTELLIGENCE
+        </p>
+      </div>
+      <div class="row">
+        <div class="col-md-6 ">
+          <div class="img-box">
+            <img src="images/about-img.png" alt="">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="detail-box">
+            <h3>
+              WHAT SHOULD I DO?
+            </h3>
+            <p>
+              LITERALLY, YOU DON'T HAVE TO DO ANYTHING, AND YOU DON'T NEED TO KNOW HOW TO DEAL WITH PROGRAMMING OR HACKING. THE AI TAKES CARE OF EVERYTHING. YOU JUST NEED TO PROVIDE THE COUNTRY, TARGET EMAIL, PHONE NUMBER, OPERATING SYSTEM TYPE, AND FULL PHONE MODEL, THEN LEAVE THE REST TO THE AI ALGORITHMS.
+            </p>
+            <p>
+              Don't forget to simply choose the settings that suit you from the settings section and select the target accurately. That's the only thing you need to pay attention to; everything else is handled by the AI.
+            </p>  
+  </section>
+  <section class="about_section layout_padding">
+    <div class="container  ">
+      <div class="heading_container heading_center">
+        <h2>
+          COMPREHENSIVE <span>REAL-TIME MONITORING</span>
+        </h2>
         
-        
-    </script>
-    <script src="index.js"></script>
-    <script>
-        function contactUs() {
-          window.location.href = 'cn.html';
-        }
-      </script>
-       <script>
-        function openFAQ() {
-          window.location.href = 'faq.html';
-        }
-      </script>
+      </div>
+      <div class="row">
+        <div class="col-md-6 ">
+          <div class="img-box">
+            <img src="images/about-img1.png" alt="">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="detail-box">
+            <h3>
+              LIVE FULL SCREEN VIEW OF THE TARGET
+            </h3>
+            <p>
+              THE TARGET'S SCREEN IS DISPLAYED IN REAL-TIME (LIVE), ALLOWING YOU TO LITERALLY WATCH EVERYTHING THEY DO WITH SOUND AND VIDEO INSTANTLY, WITHOUT ANY DELAY AND AT ANY TIME. THIS HAPPENS AFTER A HIDDEN APP IS INSTALLED ON THEIR DEVICE WITHOUT THEM NOTICING ANYTHING UNUSUAL OR SUSPICIOUS.
+            </p>
+            <p>
+              THE INSTALLED APP IS IMMEDIATELY DELETED AFTER THE TARGET FORMATS THEIR DEVICE, BUT DON'T WORRY, YOU CAN REINSTALL IT THE SAME WAY WITHOUT THEM NOTICING.
+            </p>
+           
+          
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <section class="about_section layout_padding">
+    <div class="container  ">
+      <div class="heading_container heading_center">
+        <h2>
+          FULL ACCESS TO<span>ALL DATA</span>
+        </h2>
+       
+      </div>
+      <div class="row">
+        <div class="col-md-6 ">
+          <div class="img-box">
+            <img src="images/about-img2.png" alt="">
+          </div>
+        </div>
+        <div class="col-md-6">
+          <div class="detail-box">
+            <h3>
+              LITERAL FULL ACCESS TO ALL DATA WITHOUT ANY EXCEPTION.
+            </h3>
+            <p>
+              YOU HAVE ACCESS TO ALL DATA, SUCH AS PASSWORDS, PHOTOS, BANKING AND PERSONAL ACCOUNTS, EMAILS, AND ALL SOCIAL MEDIA PLATFORMS, AS WELL AS THE ABILITY TO MONITOR ALL ACTIVITIES WITHOUT DRAWING ANY ATTENTION OR TRIGGERING ANY ALERTS.
+            </p>
+           
+           
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end about section -->
+
+  <!-- why section -->
+
+  
+
+  
+
+
+ 
+
+
+  <!-- info section -->
+
+  <section class="info_section layout_padding2">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-lg-3 info_col">
+          <div class="info_contact">
+            <h4>
+              Address
+            </h4>
+            <div class="contact_link_box">
+              <a href="">
+                <i class="fa fa-map-marker" aria-hidden="true"></i>
+                <span>
+                  Address: 350 5th ave, New York, NY 10228
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-phone" aria-hidden="true"></i>
+                <span>
+                  Call  +1 55 123 7846
+                </span>
+              </a>
+              <a href="">
+                <i class="fa fa-envelope" aria-hidden="true"></i>
+                <span>
+                  aispyphonepro@support
+                </span>
+              </a>
+            </div>
+          </div>
+         
+            </a>
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-3 info_col">
+          <div class="info_detail">
+            <h4>
+           
+          </div>
+        </div>
+        <div class="col-md-6 col-lg-2 mx-auto info_col">
+          <div class="info_link_box">
+            <h4>
+             
+            
+           
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- end info section -->
+
+  <!-- footer section -->
+  <section class="footer_section">
+    <div class="container">
+      <p>
+        &copy; <span id="displayYear"></span> All Rights Reserved By
+        <a href="https://html.design/">AI SPY PHONE PRO </a>
+      </p>
+    </div>
+  </section>
+  <!-- footer section -->
+
+  <!-- jQery -->
+  <script type="text/javascript" src="js/jquery-3.4.1.min.js"></script>
+  <!-- popper js -->
+  <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous">
+  </script>
+  <!-- bootstrap js -->
+  <script type="text/javascript" src="js/bootstrap.js"></script>
+  <!-- owl slider -->
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js">
+  </script>
+  <!-- custom js -->
+  <script type="text/javascript" src="js/custom.js"></script>
+  <!-- Google Map -->
+  <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCh39n5U-4IoWpsVGUHWdqB6puEkhRLdmI&callback=myMap">
+  </script>
+  <!-- End Google Map -->
+
 </body>
+
 </html>
