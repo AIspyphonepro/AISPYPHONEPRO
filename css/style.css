@@ -4,6 +4,7 @@ body {
   color: hsl(146, 100%, 50%);
   background-image: url('../images/i3.gif');
   background-size: contain;
+  
   overflow-x: hidden;
 }
 
